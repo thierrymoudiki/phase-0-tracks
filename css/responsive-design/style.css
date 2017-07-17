@@ -16,13 +16,13 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: middle;
 }
 
 main {
-  width: 756px;
+  width: 80%;
   padding-left: 250px;
   display: inline-block;
   vertical-align: middle;
