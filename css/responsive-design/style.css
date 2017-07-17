@@ -16,6 +16,11 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+  width: 200px;
+}
+
+main {
+  width: 756px;
 }
 
 /* you're welcome to edit the
