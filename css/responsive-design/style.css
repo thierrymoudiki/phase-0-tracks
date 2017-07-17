@@ -4,6 +4,10 @@ blockquote {
   margin-left: 0px;
 }
 
+body {
+  width: 960px;
+}
+
 cite {
   display: block;
   margin-top: 10px;
