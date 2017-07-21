@@ -1,11 +1,14 @@
 header {
 	background-color: red;
+	padding: 10px;
+	border: 1px solid black;
 }
 
 section.column-1 {
 	background-color: orange;
 	width: 50%;
 	float: left;
+	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid black;
 }
@@ -14,13 +17,16 @@ section.column-2 {
 	background-color: blue;
 	width: 50%;
 	float: right;
-	padding-bottom: 92px; 
+	padding: 10px;
+	padding-bottom: 56px; 
 	box-sizing: border-box;
 	border: 1px solid black;
 }
 
 footer {
 	background-color: lightblue;
+	padding: 10px;
+	border: 1px solid black;
 }
 
 .wrapper {
