@@ -1,0 +1,19 @@
+header {
+	background-color: red;
+}
+
+section.column-1 {
+	background-color: orange;
+	width: 50%;
+	float: left;
+}
+
+section.column-2 {
+	background-color: blue;
+	width: 50%;
+	float: right;
+}
+
+footer {
+	background-color: lightblue;
+}
