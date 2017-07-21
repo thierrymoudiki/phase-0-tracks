@@ -6,14 +6,23 @@ section.column-1 {
 	background-color: orange;
 	width: 50%;
 	float: left;
+	box-sizing: border-box;
+	border: 1px solid black;
 }
 
 section.column-2 {
 	background-color: blue;
 	width: 50%;
 	float: right;
+	padding-bottom: 90px; 
+	box-sizing: border-box;
+	border: 1px solid black;
 }
 
 footer {
 	background-color: lightblue;
+}
+
+.wrapper {
+	overflow: auto;
 }
