@@ -10,7 +10,7 @@ volume_level = gets.chomp
 volume_level = volume_level.to_f
 until ((volume_level >= 1.0) && (volume_level <= 10.0))
 	puts "Tolerated volume level must be comprised between 1 and 10..."
-	puts "Try again"
+	puts "Try again: "
 	volume_level = gets.chomp
 	volume_level = volume_level.to_f
 end
@@ -26,7 +26,7 @@ puts "Available for adoption? (Y/N)"
 adoption = gets.chomp
 until (adoption == "Y" || adoption == "N")
 	puts "Accepted values are Y or N..."
-	puts "Try again"
+	puts "Try again: "
 	adoption = gets.chomp
 end
 
@@ -35,7 +35,7 @@ end
 puts "Estimated age?"
 age = gets.chomp
 if (age == "") 
-	puts "Estimated age set to nil"
+	puts "No value provided: estimated age set to nil"
 	age = nil
 else
 	age = age.to_i	
