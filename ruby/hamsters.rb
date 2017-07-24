@@ -41,3 +41,14 @@ else
 	age = age.to_i	
 end 
 
+# 6 - results
+
+puts "---------------------------------------"
+puts "Here are the results of your evaluation"
+puts "Hamster's name: #{hamster_name}"
+puts "Tolerated volume level: #{volume_level}"
+puts "Fur color: #{fur_color}"
+puts "Available for adoption (Y = Yes, N = No): #{adoption}"
+puts "Estimated age: #{age}"
+
+
