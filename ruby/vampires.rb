@@ -74,4 +74,5 @@ if (employee_name == "Drake Cula" || employee_name == "Tu Fang")
 end 	
 
 puts "=============================== \n"
+puts "\n"
 puts "Result of the survey: #{result}"
