@@ -1,3 +1,21 @@
+# 3 - allergies 
+
+def condition_allergies()
+  i = 1
+  puts "Enter allergy number #{i} (when done, type 'done')"
+  allergy = gets.chomp
+  
+  
+  i = i + 1
+  while allergy != "done"
+    puts "Enter allergy number #{i}"
+    allergy = gets.chomp
+    i = i + 1
+  end 
+  
+  return true
+  
+end 
 
 # 1 - Questions 
 def questionnaire()
@@ -50,10 +68,16 @@ end
 	else 
 		condition_insurance = false
 	end		 
+## allergies 
+  condition_allergy = condition_allergies()
 
 # 3 - Final diagnostic
 
 result = "Results inconclusive"
+
+if (condition_allergy == false)
+  result = “Probably a vampire”
+end   
 
 if(condition_age_year == true && (condition_garlic == true || condition_insurance == true))
 	result = "Probably not a vampire"
