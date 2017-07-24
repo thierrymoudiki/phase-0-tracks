@@ -1,9 +1,7 @@
-# 0 - Number of employees 
-puts "How many employees are there?"
-	nb_employees = gets.chomp
-	nb_employees = nb_employees.to_i
 
-# 1 - Questions
+# 1 - Questions 
+def questionnaire()
+  # 1 - Questions
 
 puts "What is your name?"
 	employee_name = gets.chomp 
@@ -74,5 +72,23 @@ if (employee_name == "Drake Cula" || employee_name == "Tu Fang")
 end 	
 
 puts "=============================== \n"
-puts "\n"
 puts "Result of the survey: #{result}"
+end   
+
+# 2 - Multiple employee questions 
+
+def multiple_questions()
+  # 0 - Number of employees 
+  puts "How many employees are there?"
+	nb_employees = gets.chomp
+	nb_employees = nb_employees.to_i
+  for i in 1..nb_employees
+    puts "----- Employee number #{i} ----- "
+    questionnaire()
+    puts "=============================== \n"
+    puts "\n"
+  end 
+end   
+
+
+multiple_questions()
