@@ -72,9 +72,9 @@ def bubble_sort_pass(input_array)
         # counting the swaps 
         nb_swaps += 1
         # Exchange elements if input_array[index1] > input_array[index2]
-        temp = input_array[index1]
-        input_array[index1] = input_array[index2]
-        input_array[index2] = temp
+          temp = input_array[index1]
+          input_array[index1] = input_array[index2]
+          input_array[index2] = temp
       end
     tab_index += 1
   end
