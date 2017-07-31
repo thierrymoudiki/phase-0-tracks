@@ -1,4 +1,4 @@
-# Create a hash with initial default values 
+# Create a hash with initial values 
 # ask for client's name 
 # Insert name info into the hash
 # ask for client's age 
@@ -7,7 +7,6 @@
 # Insert client info into the hash
 # # ask for client's decor theme
 # Insert name decor theme info into the hash
-# Update the hash if needed 
 # print the hash 
 
 def get_client_info
@@ -81,7 +80,7 @@ def get_client_info
   puts "\n"
   puts "----- Information recap -----"
   puts "\n"
-  # prints client_info
+  #puts client_info
   client_info.each do |key, value|
     puts key.to_s + ": " 
     puts value.to_s
