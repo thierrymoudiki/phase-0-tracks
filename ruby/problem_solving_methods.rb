@@ -69,12 +69,12 @@ def bubble_sort_pass(input_array)
     index1 = tab_index
     index2 = tab_index + 1 
       if (input_array[index1] > input_array[index2]) then
-        # counting the swaps 
+        # counting the swaps each time they occur
         nb_swaps += 1
         # Exchange elements if input_array[index1] > input_array[index2]
-          temp = input_array[index1]
-          input_array[index1] = input_array[index2]
-          input_array[index2] = temp
+        temp = input_array[index1]
+        input_array[index1] = input_array[index2]
+        input_array[index2] = temp
       end
     tab_index += 1
   end
@@ -94,6 +94,7 @@ def bubble_sort(input_array)
   
   nb_swaps = 1000
   
+  # the loop will be exited when number of swaps = 0 
   until (nb_swaps == 0) do 
     res = bubble_sort_pass(input_array)
     nb_swaps = res["nb_swaps"]
