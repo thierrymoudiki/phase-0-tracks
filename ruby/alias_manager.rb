@@ -146,18 +146,49 @@ def main_inversion_function(input_name)
   return(res.join(''))
 end   
 
-#invert_names("Felicia Torres")
-# next_consonant('r')
-puts main_inversion_function("Felicia Torres")
-puts main_inversion_function("Tata Yoyo")
-puts main_inversion_function("ZaZa Yoyo")
 
 # 4 - Interface
 
 def interface()
-  puts "Hi, special agent! What is your name?"
-  input_name = gets.chomp 
-  puts "Ok! Your new name will be: "
-  puts main_inversion_function(input_name)
-end   
+  
+  puts "How many new secret agents are there?"
+  nb_agents = gets.chomp
+  nb_agents = nb_agents.to_i
+  
+  # Hash for storing the names 
+  hsh_agent_names  = {}
+  
+  index_agent = 0 
+  while (index_agent < nb_agents)
+    puts "\n"
+    puts "Special agent number #{index_agent + 1}/#{nb_agents} name?"
+    input_name = gets.chomp 
+    puts "Special agent number #{index_agent + 1}/#{nb_agents} new name: "
+    new_name =  main_inversion_function(input_name)
+    puts new_name
+    puts "\n"
+    hsh_agent_names[input_name] = new_name
+    index_agent = index_agent + 1 
+  end 
+  
+  puts "----- Recap -----"
+  puts "\n"
+  puts "From now: "
+  hsh_agent_names.each do |key, value|
+    puts "\n"
+    puts " #{key} is also known as #{value}"
+    puts "\n"
+  end
+  
+  
+end  
 
+# 5 - Tests 
+
+#invert_names("Felicia Torres")
+# next_consonant('r')
+#puts main_inversion_function("Felicia Torres")
+#puts main_inversion_function("Tata Yoyo")
+#puts main_inversion_function("ZaZa Yoyo")
+
+interface
