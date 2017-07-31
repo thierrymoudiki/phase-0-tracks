@@ -152,3 +152,12 @@ puts main_inversion_function("Felicia Torres")
 puts main_inversion_function("Tata Yoyo")
 puts main_inversion_function("ZaZa Yoyo")
 
+# 4 - Interface
+
+def interface()
+  puts "Hi, special agent! What is your name?"
+  input_name = gets.chomp 
+  puts "Ok! Your new name will be: "
+  puts main_inversion_function(input_name)
+end   
+
