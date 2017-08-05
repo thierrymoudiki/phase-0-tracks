@@ -20,6 +20,16 @@ class Santa
     return @ethnicity    
   end    
   
+  # obtaining the reindeer ranking of Santa 
+  def get_reindeer_ranking
+    return @reindeer_ranking
+  end    
+  
+  # obtaining the age of Santa 
+  def get_age
+    return @age
+  end
+  
   # Santa speaks   
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -29,6 +39,26 @@ class Santa
   def eat_milk_and_cookies(cookie_type)
     puts "That's was a good #{cookie_type} cookie!"
   end   
+  
+  def celebrate_birthday
+    @age += 1
+  end 
+  
+  def get_mad_at(reindeer_name)
+    if @reindeer_ranking.include?(reindeer_name) 
+      index_reindeer_name = @reindeer_ranking.index(reindeer_name)
+      temp = @reindeer_ranking[-1]
+      @reindeer_ranking[-1] = reindeer_name
+      @reindeer_ranking[index_reindeer_name] = temp
+    else 
+      "reindeer name not found"
+    end 
+  end   
+  
+  def set_gender(new_gender)
+    @gender = new_gender
+  end   
+  
 end
 
 
@@ -47,3 +77,6 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
+santa1.get_reindeer_ranking
+santa1.get_mad_at("Rudolph")
