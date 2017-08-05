@@ -1,3 +1,4 @@
+=begin
 module Shout
   def self.yell_angrily(words)
     words + "!!!" + " :("
@@ -6,3 +7,4 @@ module Shout
     words + "!!!" + " :)"
   end
 end
+= end
