@@ -1,6 +1,11 @@
+# 1 - Example 1
 
 class Puppy
 
+  #def initialize
+  #  puts "Initializing new Puppy instance"
+  #end 
+    
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -18,7 +23,7 @@ class Puppy
   end
   
   def dog_years(number_of_years)
-    return number_of_years*9
+    number_of_years*9
   end   
   
   def run(number_of_meters)
@@ -43,3 +48,46 @@ toto.dog_years(3)
 
 # 5 - Add one more trick -- whichever one you'd like.
 toto.run(100)
+
+# 2 - Example 2
+
+## Release 1
+class Gymnast
+  
+  def initialize
+    @name = "Toto"
+    @age = 20
+    @height = 175
+    @weight = 60
+  end  
+  
+  def flip
+    puts "Flips!"
+  end 
+  
+  def jump
+    puts "Jumps!"
+  end 
+  
+end   
+
+## Release 2
+
+
+## Storing the objects in a hash 
+hsh_gymnasts = {}
+
+50.times {|x|
+  key = "gymnast #{x + 1}"
+  value = Gymnast.new
+  hsh_gymnasts[key] = value
+}   
+
+## Loop and call the methods on the objects stored in the hash
+hsh_gymnasts.each do |key, value|
+  puts "-----" + key + "-----"
+  puts value.flip
+  puts "and..."
+  puts value.jump
+end   
+  
