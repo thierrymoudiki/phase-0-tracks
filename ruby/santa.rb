@@ -30,6 +30,10 @@ class Santa
     return @age
   end
   
+  def set_age(given_age)
+    @age = given_age
+  end
+  
   # Santa speaks   
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -80,3 +84,19 @@ end
 
 santa1.get_reindeer_ranking
 santa1.get_mad_at("Rudolph")
+
+# Creating many santas
+n = 100
+n.times do |santa|
+  # gender 
+  gender = example_genders.sample 
+  #ethnicity
+  ethnicity = example_ethnicities.sample 
+  # age 
+  age = rand(1..10)
+  santa_object = Santa.new(gender, ethnicity)
+  santa_object.set_age(age)
+  p "Santa number #{santa} is a #{ethnicity} #{gender}, and is #{age} years old"  
+end   
+
+
