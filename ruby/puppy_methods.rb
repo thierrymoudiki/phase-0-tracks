@@ -85,7 +85,7 @@ hsh_gymnasts = {}
 
 ## Loop and call the methods on the objects stored in the hash
 hsh_gymnasts.each do |key, value|
-  puts "-----" + key + "-----"
+  p "----- #{key} -----"
   puts value.flip
   puts "and..."
   puts value.jump
