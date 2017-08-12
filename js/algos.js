@@ -20,7 +20,7 @@ function longest_phrase(array_of_phrases) {
     }
   }
 
-  console.log(array_of_phrases[index_max]);
+  return array_of_phrases[index_max];
 }
 
 
@@ -89,6 +89,8 @@ function get_strings_array(nb_elts){
 
 // Release 0
 
+console.log("----- Release 0 \n")
+
 // returns 'longest phrase'
 console.log(longest_phrase(['long phrase', 'longest phrase', 'longer phrase']));
 
@@ -112,26 +114,45 @@ console.log(
     'looongest phrase ever',
   ])
 );
+console.log("\n")
 
 // Release 1
+
+console.log("----- Release 1 \n")
 
 console.log(keyval_match({name: "Steven", age: 54}, {name: "Tamir", age: 54})); //  true
 console.log(keyval_match({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3})); //  true
 console.log(keyval_match({name: "Steven", age: 54}, {animal: "Dog", legs: 3})); //  false 
 console.log(keyval_match({name: "Steven", age: 54}, {name: "Tamir", age: 53})); //  false 
+console.log("\n")
 
 // Release 2
 
+console.log("----- Release 2 \n")
+
 // Part 1 
-get_strings_array(3);
-get_strings_array(4);
-get_strings_array(5);
+console.log("- array with 3 elements: \n")
+console.log(get_strings_array(3));
+console.log("\n")
+
+console.log("- array with 4 elements: \n")
+console.log(get_strings_array(4));
+console.log("\n")
+
+console.log("- array with 5 elements: \n")
+console.log(get_strings_array(5));
+console.log("\n")
+
 // Part 2 
+console.log("- Random arrays + longest phrase: \n")
 var current_array;
 var long_phrase;
 for (var i = 0; i < 10; i++){
   current_array = get_strings_array(i+1); 
+  console.log("array #" + i + ": ");
   console.log(current_array);
   long_phrase = longest_phrase(current_array); 
-  console.log();
+  console.log("longest phrase in array #" + i + ": ");
+  console.log(long_phrase);
+  console.log("\n")
 }
