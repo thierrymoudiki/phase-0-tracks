@@ -2,10 +2,12 @@
 
 // input: array of phrases
 // create an index for storing the array's index for the phrase with    maximum length
+// create a variable saying what is the current highest length observed 
 // For each element in the array of phrases, calculate its length
-// If the length of the element is < the length of the next element
-// then index is equal to index of next element
-// output: print in the console the longest phrase in the array
+//  If the length of current element is > the current highest length observed 
+//  then index <- to index of the current element
+//       and current highest length observed <- length of current elt 
+// output: the longest phrase in the array corresponds to array_of_phrases[index]
 
 // Finds the longest phrase in a array and returns it
 function longest_phrase(array_of_phrases) {
@@ -13,10 +15,14 @@ function longest_phrase(array_of_phrases) {
   var n = array_of_phrases.length;
   // index for the element with maximum length
   var index_max = 0;
+  var current_max_length = 0;
+  var current_elt = 0; 
 
-  for (var i = 0; i < n - 1; i++) {
-    if (array_of_phrases[i].length < array_of_phrases[i + 1].length) {
-      index_max = i + 1;
+  for (var i = 0; i < n; i++) {
+     current_elt = array_of_phrases[i];
+    if (current_elt.length > current_max_length) {
+      current_max_length = current_elt.length;
+      index_max = i;
     }
   }
 
@@ -78,9 +84,10 @@ function generate_word(nb_letters)
 // output: array of strings with 'nb_elts' random words 
 function get_strings_array(nb_elts){
   var res_array = new Array(nb_elts); 
-  for (var i = 0; i < nb_elts; i++){
-    res_array[i] = generate_word(Math.floor(Math.random() * 10) + 1); 
-  }
+  
+    for (var i = 0; i < nb_elts; i++){
+      res_array[i] = generate_word(Math.floor(Math.random() * 10) + 1); 
+    }
   
   return res_array;
 }
@@ -149,7 +156,7 @@ var current_array;
 var long_phrase;
 for (var i = 0; i < 10; i++){
   current_array = get_strings_array(i+1); 
-  console.log("array #" + i + ": ");
+  console.log("array #" + (i + 1) + ": ");
   console.log(current_array);
   long_phrase = longest_phrase(current_array); 
   console.log("longest phrase in array #" + i + ": ");
