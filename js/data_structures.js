@@ -47,7 +47,7 @@ console.log("\n");
 console.log("Our car can honk:");
 anotherCar.honk();
 console.log("\n");
-if (anotherCar.isAutomatic == true)
+if (anotherCar.isAutomatic === true)
 {
   console.log("Our " + anotherCar.name + " is automatic, has" + anotherCar.cylinders + "cylinders and has made" + anotherCar.miles + " miles so far");
 } else {
@@ -66,7 +66,7 @@ console.log("\n");
 console.log("Our car can honk:");
 anotherCar.honk();
 console.log("\n");
-if (anotherCar.isAutomatic == true)
+if (anotherCar.isAutomatic === true)
 {
   console.log("Our " + anotherCar.name + " is automatic, has " + anotherCar.cylinders + " cylinders and has made " + anotherCar.miles + " miles so far");
 } else {
