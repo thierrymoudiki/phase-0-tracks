@@ -1,0 +1,15 @@
+
+# join multiple tables
+select * 
+from  users join reviews 
+join businesses 
+on users.id = reviews.user_id and businesses.id = reviews.business_id;
+
+
+# select relevant columns 
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from  users join reviews 
+join businesses on users.id = reviews.user_id and businesses.id = reviews.business_id;
+
+
+# select reviews from ‘Sushi World’
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from  users join reviews join businesses on users.id = reviews.user_id and businesses.id = reviews.business_id where businesses.name = "Sushi World";
