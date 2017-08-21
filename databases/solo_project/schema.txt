@@ -1,0 +1,13 @@
+table cars(
+   		id integer primary key,
+   		model varchar(255),
+   		consumption real,
+   		nb_cylinders integer,
+   		weight real,
+   		brand_id integer,
+   		foreign key (brand_id) references brands(id));
+
+
+table brands(
+    id integer primary key,
+    name varchar(255));   		
