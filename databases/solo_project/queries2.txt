@@ -1,0 +1,50 @@
+# create tables 
+CREATE TABLE cars(
+id integer primary key,
+model varchar(255),
+consumption real,
+nb_cylinders integer,
+weight real,
+brand_id integer,
+foreign key (brand_id) references brands(id));
+CREATE TABLE brands(
+id integer primary key,
+name varchar(255));
+
+# populate table brands 
+insert into brands(name) values("Mazda");                
+insert into brands(name) values("Hornet");
+insert into brands(name) values("Datsun");
+
+# populate tables cars 
+insert into cars(model ,consumption, nb_cylinders, weight, brand_id) values("Mazda",21.0,6,2.620,1);
+update cars set model = "RX4" where id = 1;
+insert into cars(model ,consumption, nb_cylinders, weight, brand_id) values("RX4 Wag »,21.0,6,2.875,1);
+insert into cars(model ,consumption, nb_cylinders, weight, brand_id) values("710",22.8,4,2.320,3);
+insert into cars(model ,consumption, nb_cylinders, weight, brand_id) values("4 Drive",21.4,6,3.215,3);
+update cars set brand_id = 2 where model = "4 Drive";
+insert into cars(model ,consumption, nb_cylinders, weight, brand_id) values("Sportabout",18.7,8,3.44,2);
+
+# view tables 
+select * from cars;
+select * from brands;
+
+# Release 2: 3. Display the information in both tables using one query.
+select * from brands join cars on cars.brand_id = brands.id;
+
+# Release 2: 4. Display a narrower selection of columns (fewer columns than all of them, in other #words) from both tables using one query.
+select brands.name, cars.model, cars.consumption from brands join cars on cars.brand_id = brands.id;
+
+# Release 2: 5. Delete an item that meets some condition (you can choose a condition that makes sense).
+delete from cars where model = "Sportabout";
+select * from cars;
+
+
+# Release 3: 1. 
+# https://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join
+
+# Release 3: 2.
+select * from brands left join cars on cars.brand_id = brands.id;
+select * from brands right join cars on cars.brand_id = brands.id;
+#Error: RIGHT and FULL OUTER JOINs are not currently supported
+
