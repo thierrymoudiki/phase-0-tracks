@@ -40,7 +40,7 @@ delete from cars where model = "Sportabout";
 select * from cars;
 
 
-# Release 3: 1. 
+# Release 3: 1. Can you bookmark any good diagrams that will help you tell different joins apart in the future?
 # https://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join
 
 # Release 3: 2.
